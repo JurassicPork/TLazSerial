@@ -1,4 +1,4 @@
-LazSerial v0.1 
+LazSerial v0.2
 Serial Port Component for Lazarus (windows and linux).
 by Jurassic Pork  03/2013
 This library is Free software; you can rediStribute it and/or modify it
@@ -56,6 +56,6 @@ To connect to a bluetooth GPS on Linux
 echo connection to a  bluetooth GPS(/dev/rfcomm0)
 
 sudo rfcomm bind  0 xx:xx:xx:xx:xx:xx 1
+===========================================================
+V 0.2  01/2017 : Change BaudRates for UNIX - rename synaser files units
 
-
-Sorry for my poor english but it isn't my natural language.

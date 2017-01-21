@@ -41,7 +41,7 @@ you can send NMEA frames ( GGA GLL RMC°) to the opened serial port
 In the memo you can see what is received from  the opened serial port.
 In the status bar you can see the status events.
 
-V 0.2  01/2017 : Change BaudRates for UNIX 
+V 0.2  01/2017 : Change BaudRates for UNIX - rename synaser files units
 
 }
 
