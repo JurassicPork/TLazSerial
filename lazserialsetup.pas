@@ -64,9 +64,19 @@ implementation
 uses lazsynaser;
 
 const
+{$IFDEF UNIX}
+  BaudRateStrings: array[TBaudRate] of string =
+    ('0', '50', '75', '110', '134', '150', '200', '300', '600', '1200', '1800',
+    '2400', '4800', '9600', '19200', '38400', '57600', '115200', '230400'
+    {$IFNDEF DARWIN}  // LINUX
+       , '460800', '500000', '576000', '921600', '1000000', '1152000', '1500000',
+       '2000000', '2500000', '3000000', '3500000', '4000000'
+    {$ENDIF}  );
+{$ELSE}      // MSWINDOWS
   BaudRateStrings: array[TBaudRate] of string = ('110', '300', '600',
     '1200', '2400', '4800', '9600', '14400', '19200', '38400', '56000', '57600',
     '115200', '128000', '230400', '256000','460800', '921600');
+{$ENDIF}
   StopBitsStrings: array[TStopBits] of string = ('1', '1.5', '2');
   DataBitsStrings: array[TDataBits] of string = ('8', '7', '6', '5');
   ParityBitsStrings: array[TParity] of string = ('None', 'Odd', 'Even',

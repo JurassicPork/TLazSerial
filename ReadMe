@@ -1,6 +1,6 @@
 LazSerial v0.2
 Serial Port Component for Lazarus (windows and linux).
-by Jurassic Pork  03/2013
+by Jurassic Pork  03/2013   - 01/2017
 This library is Free software; you can rediStribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
   the Free Software Foundation; either version 2 of the License, or (at your
@@ -57,5 +57,6 @@ echo connection to a  bluetooth GPS(/dev/rfcomm0)
 
 sudo rfcomm bind  0 xx:xx:xx:xx:xx:xx 1
 ===========================================================
-V 0.2  01/2017 : Change BaudRates for UNIX - rename synaser files units
+V 0.2  01/2017 : BaudRates for UNIX fixed - synaser files units renamed (with laz prefix)
+                 scan port for linux improved
 
