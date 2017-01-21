@@ -67,7 +67,7 @@
   {$WARN SUSPICIOUS_TYPECAST OFF}
 {$ENDIF}
 
-unit synautil;
+unit LazSynaUtil;
 
 interface
 
@@ -84,7 +84,7 @@ uses
 {$IFDEF CIL}
   System.IO,
 {$ENDIF}
-  SysUtils, Classes, SynaFpc;
+  SysUtils, Classes, LazSynafpc;
 
 {$IFDEF VER100}
 type

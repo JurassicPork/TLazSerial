@@ -12,7 +12,7 @@
         <CompilerPath Value="$(CompPath)"/>
       </Other>
     </CompilerOptions>
-    <Version Minor="1"/>
+    <Version Minor="2"/>
     <Files Count="1">
       <Item1>
         <Filename Value="lazserial.pas"/>

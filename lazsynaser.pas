@@ -95,7 +95,7 @@ case with my USB modem):
 {$H+}
 {$M+}
 
-unit synaser;
+unit LazSynaSer;
 
 interface
 
@@ -116,8 +116,8 @@ uses
   winver,
   {$ENDIF}
 {$ENDIF}
-  synafpc,
-  Classes, SysUtils, synautil;
+  LazSynaFpc,
+  Classes, SysUtils, LazSynaUtil;
 
 const
   CR = #$0d;
@@ -2337,7 +2337,7 @@ var
   TmpPorts: String;
   sr : TSearchRec;
 
-  procedure ScanForPorts( const ThisRootStr : string); // added by PDF
+  procedure ScanForPorts( const ThisRootStr : string; special :  boolean); // added by PDF
   var theDevice : String;
   var FD : Cint;
   var Ser : TSerialStruct;
@@ -2357,8 +2357,9 @@ var
 // try to get serial info from the device
            if fpioctl( FD,TIOCGSERIAL, @Ser) <> -1 then
              begin
-// device is serial if type is not unknown
-              if (Ser.typ <> 0)  then
+// device is serial if type is not unknown (if not special device)
+
+              if ((Ser.typ <> 0) OR (special) ) then
                TmpPorts := TmpPorts + '  ' + theDevice;
                fpclose(FD);
              end;
@@ -2371,11 +2372,11 @@ var
 begin
   try
     TmpPorts := '';
-    ScanForPorts( '/dev/rfcomm*');
+    ScanForPorts( '/dev/rfcomm*',true);
  //   ScanForPorts( '/dev/pts/*');
-    ScanForPorts( '/dev/ttyUSB*');
-    ScanForPorts( '/dev/ttyS*');
-    ScanForPorts( '/dev/ttyAM*'); // for ARM board
+    ScanForPorts( '/dev/ttyUSB*',true);
+    ScanForPorts( '/dev/ttyS*',false);
+    ScanForPorts( '/dev/ttyAM*',true); // for ARM board
     FindClose(sr);
   finally
     Result:=TmpPorts;

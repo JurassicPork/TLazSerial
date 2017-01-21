@@ -55,7 +55,7 @@
   {$ENDIF}
 {$ENDIF}
 
-unit synafpc;
+unit LazSynaFpc;
 
 interface
 
