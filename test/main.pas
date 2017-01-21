@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, LazSerial,
-  StdCtrls, ExtCtrls, ComCtrls,inifiles,Math, synaser;
+  StdCtrls, ExtCtrls, ComCtrls,inifiles,Math, lazsynaser;
 
 type
 
