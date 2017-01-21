@@ -61,7 +61,7 @@ function FlowControlToStr(FlowControl: TFlowControl): string;
 
 implementation
 
-uses synaser;
+uses lazsynaser;
 
 const
   BaudRateStrings: array[TBaudRate] of string = ('110', '300', '600',
