@@ -2329,14 +2329,14 @@ begin
 end;
 {$ENDIF}
 {$IFNDEF MSWINDOWS}
-// Modif J.P   03/2013
+// Modif J.P   03/2013 - O1/2017
 function GetSerialPortNames: string;
 var
   Index: Integer;
   Data: string;
   TmpPorts: String;
   sr : TSearchRec;
-
+// J.P  01/2017  new boolean parameter : special
   procedure ScanForPorts( const ThisRootStr : string; special :  boolean); // added by PDF
   var theDevice : String;
   var FD : Cint;
@@ -2358,7 +2358,7 @@ var
            if fpioctl( FD,TIOCGSERIAL, @Ser) <> -1 then
              begin
 // device is serial if type is not unknown (if not special device)
-
+              // new parameter special
               if ((Ser.typ <> 0) OR (special) ) then
                TmpPorts := TmpPorts + '  ' + theDevice;
                fpclose(FD);
