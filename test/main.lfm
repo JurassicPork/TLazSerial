@@ -1,19 +1,22 @@
 object FMain: TFMain
-  Left = 213
+  Left = 84
   Height = 408
-  Top = 153
+  Top = 23
   Width = 591
+  HelpContext = 591
   HorzScrollBar.Page = 369
   VertScrollBar.Page = 293
   ActiveControl = BStartSimu
   Caption = 'GPS Simulator 0.1'
   ClientHeight = 408
   ClientWidth = 591
+  Constraints.MinHeight = 408
+  Constraints.MinWidth = 591
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '1.0.6.0'
+  LCLVersion = '1.6.0.4'
   object BStartSimu: TButton
     Left = 135
     Height = 25
@@ -31,7 +34,7 @@ object FMain: TFMain
     Height = 196
     Top = 184
     Width = 576
-    Anchors = [akTop, akLeft, akBottom]
+    Anchors = [akTop, akLeft, akRight, akBottom]
     Color = clBlack
     Font.CharSet = ANSI_CHARSET
     Font.Color = clYellow
@@ -83,9 +86,9 @@ object FMain: TFMain
   end
   object Label1: TLabel
     Left = 122
-    Height = 22
+    Height = 21
     Top = 12
-    Width = 87
+    Width = 86
     Caption = 'Longitude :'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -94,9 +97,9 @@ object FMain: TFMain
   end
   object Label2: TLabel
     Left = 135
-    Height = 22
+    Height = 21
     Top = 48
-    Width = 72
+    Width = 71
     Caption = 'Latitude :'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -105,9 +108,10 @@ object FMain: TFMain
   end
   object Label3: TLabel
     Left = 416
-    Height = 22
+    Height = 21
     Top = 12
-    Width = 71
+    Width = 70
+    Anchors = [akTop, akRight]
     Caption = 'Altitude :'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -116,9 +120,10 @@ object FMain: TFMain
   end
   object Label5: TLabel
     Left = 416
-    Height = 22
+    Height = 21
     Top = 87
-    Width = 74
+    Width = 73
+    Anchors = [akTop, akRight]
     Caption = 'Heading :'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -129,7 +134,7 @@ object FMain: TFMain
     Left = 304
     Height = 24
     Top = 120
-    Width = 104
+    Width = 120
     AutoSize = False
     Caption = 'GGA - GGL'
     Font.Height = -16
@@ -141,7 +146,7 @@ object FMain: TFMain
     Left = 304
     Height = 24
     Top = 144
-    Width = 61
+    Width = 120
     AutoSize = False
     Caption = 'RMC'
     Font.Height = -16
@@ -151,9 +156,10 @@ object FMain: TFMain
   end
   object Label4: TLabel
     Left = 433
-    Height = 22
+    Height = 21
     Top = 48
-    Width = 56
+    Width = 55
+    Anchors = [akTop, akRight]
     Caption = 'Speed :'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -173,9 +179,10 @@ object FMain: TFMain
   end
   object Label6: TLabel
     Left = 546
-    Height = 22
+    Height = 21
     Top = 12
-    Width = 16
+    Width = 15
+    Anchors = [akTop, akRight]
     Caption = 'm'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -184,9 +191,10 @@ object FMain: TFMain
   end
   object Label7: TLabel
     Left = 546
-    Height = 22
+    Height = 21
     Top = 48
-    Width = 43
+    Width = 42
+    Anchors = [akTop, akRight]
     Caption = 'Km/h'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -195,9 +203,10 @@ object FMain: TFMain
   end
   object Label8: TLabel
     Left = 544
-    Height = 22
+    Height = 21
     Top = 85
-    Width = 7
+    Width = 6
+    Anchors = [akTop, akRight]
     Caption = '°'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -287,6 +296,7 @@ object FMain: TFMain
     Height = 29
     Top = 8
     Width = 42
+    Anchors = [akTop, akRight]
     Color = 14155775
     Font.Height = -16
     Font.Style = [fsBold]
@@ -300,6 +310,7 @@ object FMain: TFMain
     Height = 29
     Top = 46
     Width = 43
+    Anchors = [akTop, akRight]
     Color = 14155775
     Font.Height = -16
     Font.Style = [fsBold]
@@ -313,6 +324,7 @@ object FMain: TFMain
     Height = 29
     Top = 82
     Width = 42
+    Anchors = [akTop, akRight]
     Color = 14155775
     Font.Height = -16
     Font.Style = [fsBold]
@@ -323,9 +335,9 @@ object FMain: TFMain
   end
   object Label9: TLabel
     Left = 265
-    Height = 22
+    Height = 21
     Top = 12
-    Width = 7
+    Width = 6
     Caption = '°'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -334,9 +346,9 @@ object FMain: TFMain
   end
   object Label10: TLabel
     Left = 265
-    Height = 22
+    Height = 21
     Top = 48
-    Width = 7
+    Width = 6
     Caption = '°'
     Font.Height = -16
     Font.Style = [fsBold]
@@ -345,9 +357,9 @@ object FMain: TFMain
   end
   object Label11: TLabel
     Left = 346
-    Height = 22
+    Height = 21
     Top = 12
-    Width = 6
+    Width = 5
     Caption = ''''
     Font.Height = -16
     Font.Style = [fsBold]
@@ -356,9 +368,9 @@ object FMain: TFMain
   end
   object Label12: TLabel
     Left = 346
-    Height = 22
+    Height = 21
     Top = 46
-    Width = 6
+    Width = 5
     Caption = ''''
     Font.Height = -16
     Font.Style = [fsBold]

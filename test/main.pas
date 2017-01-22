@@ -112,11 +112,13 @@ procedure AnalyseTrames(var s: string);
 var NMEAStrings : NMEAstr;
 var index: byte;
 var sub:string = '';
+var posGGA : integer;
 begin
 NMEAStrings.time := '';
-if (pos('$GPGGA', s)> 0) and (not SimuEnRoute) then
+posGGA :=  pos('$GPGGA', s);
+if (posGGA > 0) and (not SimuEnRoute) then
     begin
-      index := 8;
+      index := posGGA + 7;
       if not nextcomma(s,index,sub)then
           // time
          begin
