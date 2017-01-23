@@ -7,7 +7,7 @@ object FMain: TFMain
   HorzScrollBar.Page = 369
   VertScrollBar.Page = 293
   ActiveControl = BStartSimu
-  Caption = 'GPS Simulator 0.1'
+  Caption = 'GPS Simulator 0.2'
   ClientHeight = 408
   ClientWidth = 591
   Constraints.MinHeight = 408
