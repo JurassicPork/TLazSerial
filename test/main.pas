@@ -374,10 +374,10 @@ begin
   case Reason of
     HR_SerialClose : StatusBar1.SimpleText := 'Port ' + Value + ' closed';
     HR_Connect :   StatusBar1.SimpleText := 'Port ' + Value + ' connected';
-    HR_CanRead :   StatusBar1.SimpleText := 'CanRead : ' + Value ;
-    HR_CanWrite :  StatusBar1.SimpleText := 'CanWrite : ' + Value ;
-    HR_ReadCount : StatusBar1.SimpleText := 'ReadCount : ' + Value ;
-    HR_WriteCount : StatusBar1.SimpleText := 'WriteCount : ' + Value ;
+//    HR_CanRead :   StatusBar1.SimpleText := 'CanRead : ' + Value ;
+//    HR_CanWrite :  StatusBar1.SimpleText := 'CanWrite : ' + Value ;
+//    HR_ReadCount : StatusBar1.SimpleText := 'ReadCount : ' + Value ;
+//    HR_WriteCount : StatusBar1.SimpleText := 'WriteCount : ' + Value ;
     HR_Wait :  StatusBar1.SimpleText := 'Wait : ' + Value ;
 
   end ;
