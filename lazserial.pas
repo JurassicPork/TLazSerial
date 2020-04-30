@@ -1,6 +1,6 @@
-{ LazSerial v0.2
+{ LazSerial v0.3
 Serial Port Component for Lazarus 
-by Jurassic Pork  03/2013 01/2017
+by Jurassic Pork  03/2013 04/2020
 This library is Free software; you can rediStribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
   the Free Software Foundation; either version 2 of the License, or (at your
@@ -23,6 +23,10 @@ This library is Free software; you can rediStribute it and/or modify it
 { Synaser library  by Lukas Gebauer }
 { TcomPort component }
 
+{ new in v0.3 version
+ Add conditional macros for cpuarm rpi in lazsynaser.pas
+ Hide Active property from IDE Object inspector
+}
 
 { features :
 Changed :  baudrate values.
@@ -59,7 +63,8 @@ uses
 {$ELSE}
   Windows, Classes, //registry,
 {$ENDIF}
-  SysUtils, lazsynaser,  LResources, Forms, Controls, Graphics, Dialogs;
+  SysUtils, lazsynaser,  LResources, Forms, Controls, Graphics, Dialogs,
+  PropEdits;
 
 
 type
@@ -495,6 +500,8 @@ end;
 procedure Register;
 begin
   RegisterComponents('LazSerial', [TLazSerial]);
+  RegisterPropertyEditor(TypeInfo(boolean), TLazSerial,
+                        'Active', THiddenPropertyEditor);
 end;
 
 initialization
