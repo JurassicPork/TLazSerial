@@ -216,14 +216,14 @@ type
   PDCB = ^TDCB;
 
 const
-{$IFDEF UNIX}
+{$IF (DEFINED(UNIX)) AND (NOT (DEFINED(CPUARM))) }
   {$IFDEF DARWIN}
   MaxRates = 18;  //MAC
   {$ELSE}
    MaxRates = 30; //UNIX
   {$ENDIF}
 {$ELSE}
-  MaxRates = 19;  //WIN
+  MaxRates = 19;  //WIN  and Raspberry Pi
 {$ENDIF}
   Rates: array[0..MaxRates, 0..1] of cardinal =
   (
@@ -248,7 +248,7 @@ const
     (230400, B230400)
 {$IFNDEF DARWIN}
     ,(460800, B460800)
-  {$IFDEF UNIX}
+  {$IF (DEFINED(UNIX)) AND (NOT (DEFINED(CPUARM)))} //Not for RPi with ARM CPU
     ,(500000, B500000),
     (576000, B576000),
     (921600, B921600),
