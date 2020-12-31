@@ -52,7 +52,7 @@ type
     procedure BStartSimuClick(Sender: TObject);
     procedure BPortSettingsClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormClose(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure SerialRxData(Sender: TObject);
     procedure SerialStatus(Sender: TObject; Reason: THookSerialReason;
@@ -109,12 +109,10 @@ index:=j+1;
 end;
 
 procedure AnalyseTrames(var s: string);
-var NMEAStrings : NMEAstr;
 var index: byte;
 var sub:string = '';
 var posGGA : integer;
 begin
-NMEAStrings.time := '';
 posGGA :=  pos('$GPGGA', s);
 if (posGGA > 0) and (not SimuEnRoute) then
     begin
@@ -122,7 +120,6 @@ if (posGGA > 0) and (not SimuEnRoute) then
       if not nextcomma(s,index,sub)then
           // time
          begin
-           NMEAStrings.time := sub;
          end;
          if not nextcomma(s,index,sub) then
           // Latitude
@@ -186,7 +183,7 @@ DistanceFich := 0;
 VitesseFich := '0';
 end;
 
-procedure TFMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TFMain.FormClose(Sender: TObject);
 begin
   if Serial.Active then
     Serial.Active := false ;
@@ -254,7 +251,7 @@ var
   dd : Extended;
 
 begin
-   DecimalSeparator:='.';
+   DefaultFormatSettings.DecimalSeparator:='.';
   if FlipFlopEnvoi = False then
   begin
    FlipFlopEnvoi := True;
