@@ -336,20 +336,20 @@ end;
 
 procedure TLazSerial.SetBaudRate(br: TBaudRate);
 begin
+  FBaudRate:=br;
   if FSynSer.Handle<>INVALID_HANDLE_VALUE then begin
     FSynSer.Config(ConstsBaud[FBaudRate], ConstsBits[FDataBits], ConstsParity[FParity],
                    ConstsStopBits[FStopBits], FSoftflow, FHardflow);
   end;
-  FBaudRate:=br;
 end;
 
 procedure TLazSerial.SetDataBits(db: TDataBits);
 begin
+  FDataBits:=db;
   if FSynSer.Handle<>INVALID_HANDLE_VALUE then begin
     FSynSer.Config(ConstsBaud[FBaudRate], ConstsBits[FDataBits], ConstsParity[FParity],
                    ConstsStopBits[FStopBits], FSoftflow, FHardflow);
   end;
-  FDataBits:=db;
 end;
 
 procedure TLazSerial.SetFlowControl(fc: TFlowControl);
