@@ -28,6 +28,10 @@ This library is Free software; you can rediStribute it and/or modify it
  Hide Active property from IDE Object inspector
 }
 
+{ new in v0.4 version
+  DeviceClose procedure fixed
+}
+
 { features :
 Changed :  baudrate values.
             stop bits  new value : 1.5

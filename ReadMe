@@ -1,6 +1,6 @@
-LazSerial v0.3
+LazSerial v0.4
 Serial Port Component for Lazarus 
-by Jurassic Pork  03/2013 04/2020 
+by Jurassic Pork  03/2013 02/2021 
 This library is Free software; you can rediStribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
   the Free Software Foundation; either version 2 of the License, or (at your
@@ -27,6 +27,9 @@ This library is Free software; you can rediStribute it and/or modify it
  Add conditional macros for cpuarm rpi in lazsynaser.pas
  Hide Active property from IDE Object inspector              
  
+ new in v0.4 version (02/2021)
+ DeviceClose procedure fixed
+ 
 Features :
 Changed :  baudrate values.
            stop bits  new value : 1.5
@@ -44,7 +47,7 @@ you can send NMEA frames ( GGA GLL RMC) to the opened serial port
 In the memo you can see what is received from  the opened serial port.
 In the status bar you can see the status events.
 
-tested with windows 7 and Ubuntu 12.04
+tested with windows 10 and Ubuntu 20.04  Lazarus 2.0.10
                                        
 if you haven't serial ports in your PC you can use virtual ports :
 1 - WINDOWS 
