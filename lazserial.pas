@@ -223,8 +223,7 @@ begin
   // flush device
   if FSynSer.Handle<>INVALID_HANDLE_VALUE then begin
     FSynSer.Flush;
-    FSynSer.CloseSocket;
- //   FSynSer.Purge;
+    FSynSer.Purge;
   end;
   
   // stop capture thread
