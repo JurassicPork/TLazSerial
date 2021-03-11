@@ -1,6 +1,6 @@
-{ LazSerial v0.3
+{ LazSerial
 Serial Port Component for Lazarus 
-by Jurassic Pork  03/2013 04/2020
+by Jurassic Pork  03/2013 03/2021
 This library is Free software; you can rediStribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
   the Free Software Foundation; either version 2 of the License, or (at your

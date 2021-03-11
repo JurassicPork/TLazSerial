@@ -1,6 +1,6 @@
-LazSerial v0.4
+LazSerial v0.5
 Serial Port Component for Lazarus 
-by Jurassic Pork  03/2013 02/2021 
+by Jurassic Pork  03/2013 03/2021 
 This library is Free software; you can rediStribute it and/or modify it
   under the terms of the GNU Library General Public License as published by
   the Free Software Foundation; either version 2 of the License, or (at your
@@ -29,6 +29,10 @@ This library is Free software; you can rediStribute it and/or modify it
  
  new in v0.4 version (02/2021)
  DeviceClose procedure fixed
+ 
+ new in v0.5 version (03/2021)
+ Memory leak on get_serial_port_names in lazsynaser.pas fixed
+
  
 Features :
 Changed :  baudrate values.
