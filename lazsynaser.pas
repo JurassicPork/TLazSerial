@@ -2366,6 +2366,7 @@ var
            end;
         end;
       until FindNext(sr) <> 0;
+    FindClose(sr);
     end;
   end;
 
@@ -2377,7 +2378,6 @@ begin
     ScanForPorts( '/dev/ttyUSB*',true);
     ScanForPorts( '/dev/ttyS*',false);
     ScanForPorts( '/dev/ttyAM*',true); // for ARM board
-    FindClose(sr);
   finally
     Result:=TmpPorts;
   end;
