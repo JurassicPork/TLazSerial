@@ -299,7 +299,7 @@ type
   end;
 
   {:@abstract(Main class implementing all communication routines)}
-  TBlockSerial = class(TObject)
+  TBlockSerial = class(TPersistent)
   protected
     FOnStatus: THookSerialStatus;
     Fhandle: THandle;
