@@ -2,24 +2,23 @@ object ComSetupFrm: TComSetupFrm
   Left = 857
   Height = 272
   Top = 119
-  Width = 261
+  Width = 310
   HorzScrollBar.Page = 230
   VertScrollBar.Page = 271
   ActiveControl = Button1
   BorderStyle = bsDialog
   Caption = 'Setup'
   ClientHeight = 272
-  ClientWidth = 261
+  ClientWidth = 310
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.0.6.0'
   object Button1: TButton
-    Left = 88
+    Left = 104
     Height = 25
     Top = 232
-    Width = 75
+    Width = 83
     BorderSpacing.InnerBorder = 4
     Caption = 'OK'
     Default = True
@@ -34,10 +33,10 @@ object ComSetupFrm: TComSetupFrm
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 176
+    Left = 216
     Height = 25
     Top = 232
-    Width = 75
+    Width = 83
     BorderSpacing.InnerBorder = 4
     Caption = 'Cancel'
     Font.CharSet = ANSI_CHARSET
@@ -54,10 +53,10 @@ object ComSetupFrm: TComSetupFrm
     Left = 0
     Height = 216
     Top = 8
-    Width = 257
+    Width = 309
     Caption = ' Settings '
-    ClientHeight = 198
-    ClientWidth = 253
+    ClientHeight = 195
+    ClientWidth = 305
     Font.CharSet = ANSI_CHARSET
     Font.Height = -13
     Font.Name = 'MS Sans Serif'
@@ -68,49 +67,49 @@ object ComSetupFrm: TComSetupFrm
     TabOrder = 0
     object Label1: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 15
-      Width = 30
+      Width = 29
       Caption = 'Port'
       ParentColor = False
     end
     object Label2: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 48
-      Width = 69
+      Width = 68
       Caption = 'Baud rate'
       ParentColor = False
     end
     object Label3: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 79
-      Width = 64
+      Width = 63
       Caption = 'Data bits'
       ParentColor = False
     end
     object Label4: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 111
-      Width = 63
+      Width = 62
       Caption = 'Stop bits'
       ParentColor = False
     end
     object Label5: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 135
-      Width = 42
+      Width = 41
       Caption = 'Parity'
       ParentColor = False
     end
     object Label6: TLabel
       Left = 6
-      Height = 17
+      Height = 16
       Top = 167
-      Width = 85
+      Width = 84
       Caption = 'Flow control'
       ParentColor = False
     end
@@ -118,7 +117,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 11
-      Width = 152
+      Width = 200
       ItemHeight = 16
       TabOrder = 0
     end
@@ -126,7 +125,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 41
-      Width = 152
+      Width = 200
       ItemHeight = 16
       Style = csDropDownList
       TabOrder = 1
@@ -135,7 +134,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 71
-      Width = 152
+      Width = 200
       ItemHeight = 16
       Style = csDropDownList
       TabOrder = 2
@@ -144,7 +143,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 101
-      Width = 152
+      Width = 200
       ItemHeight = 16
       Style = csDropDownList
       TabOrder = 3
@@ -153,7 +152,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 131
-      Width = 152
+      Width = 200
       ItemHeight = 16
       Style = csDropDownList
       TabOrder = 4
@@ -162,7 +161,7 @@ object ComSetupFrm: TComSetupFrm
       Left = 102
       Height = 24
       Top = 161
-      Width = 152
+      Width = 200
       ItemHeight = 16
       Style = csDropDownList
       TabOrder = 5

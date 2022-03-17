@@ -1,28 +1,27 @@
 object FMain: TFMain
   Left = 84
-  Height = 510
+  Height = 408
   Top = 23
-  Width = 739
+  Width = 591
   HelpContext = 591
   HorzScrollBar.Page = 369
   VertScrollBar.Page = 293
   ActiveControl = BStartSimu
   Caption = 'GPS Simulator 0.2'
-  ClientHeight = 510
-  ClientWidth = 739
-  Constraints.MinHeight = 510
-  Constraints.MinWidth = 739
-  DesignTimePPI = 120
+  ClientHeight = 408
+  ClientWidth = 591
+  Constraints.MinHeight = 408
+  Constraints.MinWidth = 591
   OnActivate = FormActivate
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poScreenCenter
   object BStartSimu: TButton
-    Left = 169
-    Height = 31
+    Left = 135
+    Height = 25
     Hint = 'Start to send NMEA frames to the serial port'#13#10'you must check the type of NMEA frame :'#13#10'GGA-GGL or (and) RMC'
-    Top = 150
-    Width = 191
+    Top = 120
+    Width = 153
     Caption = 'Start GPS Simulator'
     OnClick = BStartSimuClick
     ParentFont = False
@@ -31,15 +30,15 @@ object FMain: TFMain
     TabOrder = 0
   end
   object Memo: TMemo
-    Left = 10
-    Height = 245
-    Top = 230
-    Width = 720
+    Left = 8
+    Height = 196
+    Top = 184
+    Width = 576
     Anchors = [akTop, akLeft, akRight, akBottom]
     Color = clBlack
     Font.CharSet = ANSI_CHARSET
     Font.Color = clYellow
-    Font.Height = -16
+    Font.Height = -13
     Font.Name = 'Default'
     Lines.Strings = (
       ''
@@ -50,11 +49,11 @@ object FMain: TFMain
     TabOrder = 1
   end
   object BOpen: TButton
-    Left = 10
-    Height = 31
+    Left = 8
+    Height = 25
     Hint = 'Open the  above serial port '
-    Top = 102
-    Width = 130
+    Top = 44
+    Width = 106
     Caption = 'Open'
     OnClick = BOpenClick
     ParentFont = False
@@ -64,10 +63,10 @@ object FMain: TFMain
   end
   object BClose: TButton
     Left = 10
-    Height = 31
+    Height = 25
     Hint = 'Close the serial port'
-    Top = 150
-    Width = 130
+    Top = 85
+    Width = 104
     Caption = 'Close'
     OnClick = BCloseClick
     ParentFont = False
@@ -76,11 +75,11 @@ object FMain: TFMain
     TabOrder = 3
   end
   object BPortSettings: TButton
-    Left = 10
-    Height = 32
+    Left = 8
+    Height = 26
     Hint = 'Open a dialog form '#13#10'for serial port settings'
-    Top = 11
-    Width = 130
+    Top = 9
+    Width = 106
     Caption = 'Port Settings'
     OnClick = BPortSettingsClick
     ParentFont = False
@@ -88,321 +87,321 @@ object FMain: TFMain
     ShowHint = True
     TabOrder = 4
   end
-  object Label1: TLabel
-    Left = 152
-    Height = 28
-    Top = 15
-    Width = 106
-    Caption = 'Longitude :'
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label2: TLabel
-    Left = 169
-    Height = 28
-    Top = 60
-    Width = 89
-    Caption = 'Latitude :'
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
   object Label3: TLabel
-    Left = 520
-    Height = 28
-    Top = 15
-    Width = 88
+    Left = 416
+    Height = 21
+    Top = 12
+    Width = 70
     Anchors = [akTop, akRight]
     Caption = 'Altitude :'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 521
-    Height = 28
-    Top = 109
-    Width = 90
+    Left = 413
+    Height = 21
+    Top = 80
+    Width = 73
     Anchors = [akTop, akRight]
     Caption = 'Heading :'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object CB_GGA: TCheckBox
-    Left = 380
-    Height = 30
-    Top = 150
-    Width = 150
+    Left = 304
+    Height = 24
+    Top = 120
+    Width = 120
     AutoSize = False
     Caption = 'GGA - GGL'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
   end
   object CB_RMC: TCheckBox
-    Left = 380
-    Height = 30
-    Top = 180
-    Width = 150
+    Left = 304
+    Height = 24
+    Top = 144
+    Width = 120
     AutoSize = False
     Caption = 'RMC'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
   end
   object Label4: TLabel
-    Left = 542
-    Height = 28
-    Top = 60
-    Width = 68
+    Left = 431
+    Height = 21
+    Top = 44
+    Width = 55
     Anchors = [akTop, akRight]
     Caption = 'Speed :'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object EditDevice: TEdit
-    Left = 12
-    Height = 28
+    Left = 128
+    Height = 23
     Hint = 'Name of the  serial port'#13#10'ex :  '#13#10'Windows :  COM1'#13#10'Linux : /dev/ttyS0'
-    Top = 59
-    Width = 128
+    Top = 10
+    Width = 192
     Color = 14614254
-    Font.Height = -15
+    Font.Height = -12
     ParentFont = False
     TabOrder = 7
   end
   object Label6: TLabel
-    Left = 683
-    Height = 28
-    Top = 15
-    Width = 18
+    Left = 546
+    Height = 21
+    Top = 12
+    Width = 15
     Anchors = [akTop, akRight]
     Caption = 'm'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object Label7: TLabel
-    Left = 683
-    Height = 28
-    Top = 60
-    Width = 52
+    Left = 546
+    Height = 21
+    Top = 44
+    Width = 42
     Anchors = [akTop, akRight]
     Caption = 'Km/h'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object Label8: TLabel
-    Left = 680
-    Height = 28
-    Top = 106
-    Width = 8
+    Left = 544
+    Height = 21
+    Top = 77
+    Width = 6
     Anchors = [akTop, akRight]
     Caption = '°'
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
-  object EditDegLon: TEdit
-    Left = 270
-    Height = 36
-    Top = 11
-    Width = 60
-    Alignment = taRightJustify
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    MaxLength = 6
-    ParentFont = False
-    TabOrder = 8
-    Text = '002'
-  end
-  object EditDegLat: TEdit
-    Left = 270
-    Height = 36
-    Top = 58
-    Width = 60
-    Alignment = taRightJustify
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    MaxLength = 6
-    ParentFont = False
-    TabOrder = 9
-    Text = '48'
-  end
-  object EditMinLon: TEdit
-    Left = 340
-    Height = 36
-    Top = 11
-    Width = 91
-    Alignment = taRightJustify
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 10
-    Text = '10.000'
-  end
-  object EditMinLat: TEdit
-    Left = 340
-    Height = 36
-    Top = 58
-    Width = 91
-    Alignment = taRightJustify
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 11
-    Text = '10.000'
-  end
-  object EditPoleLon: TEdit
-    Left = 450
-    Height = 36
-    Top = 10
-    Width = 33
-    Alignment = taCenter
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 12
-    Text = 'E'
-  end
-  object EditPoleLat: TEdit
-    Left = 450
-    Height = 36
-    Top = 58
-    Width = 35
-    Alignment = taCenter
-    Color = 14155775
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 13
-    Text = 'N'
-  end
   object EditAlt: TEdit
-    Left = 621
-    Height = 36
-    Top = 10
-    Width = 52
+    Left = 496
+    Height = 29
+    Top = 8
+    Width = 42
     Anchors = [akTop, akRight]
     Color = 14155775
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     MaxLength = 3
     ParentFont = False
-    TabOrder = 14
+    TabOrder = 8
     Text = '000'
   end
   object EditSpeed: TEdit
-    Left = 620
-    Height = 36
-    Top = 58
-    Width = 54
+    Left = 495
+    Height = 29
+    Top = 44
+    Width = 43
     Anchors = [akTop, akRight]
     Color = 14155775
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     MaxLength = 3
     ParentFont = False
-    TabOrder = 15
+    TabOrder = 9
     Text = '000'
   end
   object EditCourse: TEdit
-    Left = 621
-    Height = 36
-    Top = 102
-    Width = 52
+    Left = 496
+    Height = 29
+    Top = 77
+    Width = 42
     Anchors = [akTop, akRight]
     Color = 14155775
-    Font.Height = -20
+    Font.Height = -16
     Font.Style = [fsBold]
     MaxLength = 3
     ParentFont = False
-    TabOrder = 16
+    TabOrder = 10
     Text = '000'
-  end
-  object Label9: TLabel
-    Left = 331
-    Height = 28
-    Top = 15
-    Width = 8
-    Caption = '°'
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label10: TLabel
-    Left = 331
-    Height = 28
-    Top = 60
-    Width = 8
-    Caption = '°'
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label11: TLabel
-    Left = 432
-    Height = 28
-    Top = 15
-    Width = 6
-    Caption = ''''
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
-  end
-  object Label12: TLabel
-    Left = 432
-    Height = 28
-    Top = 58
-    Width = 6
-    Caption = ''''
-    Font.Height = -20
-    Font.Style = [fsBold]
-    ParentColor = False
-    ParentFont = False
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 29
-    Top = 481
-    Width = 739
+    Height = 23
+    Top = 385
+    Width = 591
     Panels = <>
     ParentFont = False
   end
   object BClearMemo: TButton
-    Left = 12
-    Height = 29
+    Left = 10
+    Height = 23
     Hint = 'Clear the Memo below : '#13#10'in the memo , you see what is received'#13#10'from the opened serial port'
-    Top = 200
-    Width = 130
+    Top = 160
+    Width = 104
     Caption = 'Clear Memo'
     OnClick = BClearMemoClick
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
+    TabOrder = 12
+  end
+  object Label1: TLabel
+    Left = 128
+    Height = 21
+    Top = 44
+    Width = 86
+    Caption = 'Longitude :'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 143
+    Height = 21
+    Top = 80
+    Width = 71
+    Caption = 'Latitude :'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object EditDegLon: TEdit
+    Left = 216
+    Height = 29
+    Top = 40
+    Width = 48
+    Alignment = taRightJustify
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    MaxLength = 6
+    ParentFont = False
+    TabOrder = 13
+    Text = '002'
+  end
+  object EditDegLat: TEdit
+    Left = 216
+    Height = 29
+    Top = 77
+    Width = 48
+    Alignment = taRightJustify
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    MaxLength = 6
+    ParentFont = False
+    TabOrder = 14
+    Text = '48'
+  end
+  object EditMinLon: TEdit
+    Left = 272
+    Height = 29
+    Top = 40
+    Width = 73
+    Alignment = taRightJustify
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 15
+    Text = '10.000'
+  end
+  object EditMinLat: TEdit
+    Left = 272
+    Height = 29
+    Top = 77
+    Width = 73
+    Alignment = taRightJustify
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 16
+    Text = '10.000'
+  end
+  object EditPoleLon: TEdit
+    Left = 360
+    Height = 29
+    Top = 40
+    Width = 26
+    Alignment = taCenter
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 17
+    Text = 'E'
+  end
+  object EditPoleLat: TEdit
+    Left = 358
+    Height = 29
+    Top = 77
+    Width = 28
+    Alignment = taCenter
+    Color = 14155775
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 18
+    Text = 'N'
+  end
+  object Label9: TLabel
+    Left = 265
+    Height = 21
+    Top = 40
+    Width = 6
+    Caption = '°'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 265
+    Height = 21
+    Top = 77
+    Width = 6
+    Caption = '°'
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 352
+    Height = 21
+    Top = 40
+    Width = 5
+    Caption = ''''
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 346
+    Height = 21
+    Top = 77
+    Width = 5
+    Caption = ''''
+    Font.Height = -16
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
   end
   object Serial: TLazSerial
     Active = False
@@ -415,14 +414,14 @@ object FMain: TFMain
     RcvLineCRLF = False
     OnRxData = SerialRxData
     OnStatus = SerialStatus
-    Left = 210
-    Top = 90
+    Left = 520
+    Top = 128
   end
   object Timer1: TTimer
     Enabled = False
     Interval = 2000
     OnTimer = Timer1Timer
-    Left = 160
-    Top = 90
+    Left = 448
+    Top = 128
   end
 end
