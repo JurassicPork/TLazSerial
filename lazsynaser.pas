@@ -2406,10 +2406,10 @@ begin
     ScanForPorts( '/dev/ttyUSB*',true);
     ScanForPorts( '/dev/ttyS*',false);
    {$IFDEF DARWIN}
-    ScanForPorts( '/dev/tty.usbserial*'); // RPH 14May2016, for FTDI driver
-    ScanForPorts( '/dev/tty.UC-232*');    // RPH 15May2016, for Prolific driver
+    ScanForPorts( '/dev/tty.usbserial*',false); // RPH 14May2016, for FTDI driver
+    ScanForPorts( '/dev/tty.UC-232*',false);    // RPH 15May2016, for Prolific driver
    {$ELSE}
-     ScanForPorts( '/dev/ttyAM*'); // for ARM board
+     ScanForPorts( '/dev/ttyAM*',false); // for ARM board
    {$ENDIF}
   finally
     Result:=TmpPorts;

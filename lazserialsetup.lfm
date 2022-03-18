@@ -115,10 +115,18 @@ object ComSetupFrm: TComSetupFrm
     end
     object ComComboBox1: TComboBox
       Left = 102
-      Height = 24
+      Height = 21
       Top = 11
       Width = 200
-      ItemHeight = 16
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ItemHeight = 13
+      ParentFont = False
       TabOrder = 0
     end
     object ComComboBox2: TComboBox

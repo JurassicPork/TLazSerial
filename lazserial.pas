@@ -23,14 +23,6 @@ This library is Free software; you can rediStribute it and/or modify it
 { Synaser library  by Lukas Gebauer }
 { TcomPort component }
 
-{ new in v0.3 version
- Add conditional macros for cpuarm rpi in lazsynaser.pas
- Hide Active property from IDE Object inspector
-}
-
-{ new in v0.4 version
-  DeviceClose procedure fixed
-}
 
 { features :
 Changed :  baudrate values.
