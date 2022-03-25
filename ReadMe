@@ -70,6 +70,4 @@ echo connection to a  bluetooth GPS(/dev/rfcomm0)
 
 sudo rfcomm bind  0 xx:xx:xx:xx:xx:xx 1
 ===========================================================
-V 0.2  01/2017 : BaudRates for UNIX fixed - synaser files units renamed (with laz prefix)
-                 scan port for linux improved
-
+![TlazSerial](https://user-images.githubusercontent.com/9909302/160068324-3467fac2-90e4-4625-9bfb-9cc0ef058bad.PNG)
