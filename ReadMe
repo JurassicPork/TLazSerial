@@ -70,4 +70,4 @@ echo connection to a  bluetooth GPS(/dev/rfcomm0)
 
 sudo rfcomm bind  0 xx:xx:xx:xx:xx:xx 1
 ===========================================================
-![TlazSerial](https://user-images.githubusercontent.com/9909302/160068324-3467fac2-90e4-4625-9bfb-9cc0ef058bad.PNG)
+ScreenShot here : https://user-images.githubusercontent.com/9909302/160068324-3467fac2-90e4-4625-9bfb-9cc0ef058bad.PNG
