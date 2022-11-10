@@ -41,8 +41,10 @@
 |==============================================================================|
 | History: see HISTORY.HTM from distribution package                           |
 |          (Found at URL: http://www.ararat.cz/synapse/)                       |
+|==============================================================================|
+| Some changes  for LazSerial : J.P 2017 2022                                  |
+|                                                                              |
 |==============================================================================}
-
 {: @abstract(Serial port communication library)
 This unit contains a class that implements serial port communication 
  for Windows, Linux, Unix or MacOSx. This class provides numerous methods with 
@@ -2348,12 +2350,13 @@ begin
 end;
 {$ENDIF}
 {$IFNDEF MSWINDOWS}
-// Modif J.P   03/2013 - O1/2017
+// Modif J.P   03/2013 - O1/2017 - 11/2022
 function GetSerialPortNames: string;
 var
   Index: Integer;
   Data: string;
   TmpPorts: String;
+  flags : Longint;
   sr : TSearchRec;
 // J.P  01/2017  new boolean parameter : special
   procedure ScanForPorts( const ThisRootStr : string; special :  boolean); // added by PDF
@@ -2363,10 +2366,10 @@ var
    var Ser : TSerialStruct;
 {$ENDIF}
   begin
-    if FindFirst( ThisRootStr, $FFFFFFFF, sr) = 0 then
+    if FindFirst( ThisRootStr, flags, sr) = 0 then
     begin
       repeat
-        if (sr.Attr and $FFFFFFFF) = Sr.Attr then
+        if (sr.Attr and flags) = Sr.Attr then
         begin
           data := sr.Name;
           index := length(data);
@@ -2402,9 +2405,11 @@ var
 begin
   try
     TmpPorts := '';
+    flags := faAnyFile AND (NOT faDirectory);
     ScanForPorts( '/dev/rfcomm*',true);
     ScanForPorts( '/dev/ttyUSB*',true);
     ScanForPorts( '/dev/ttyS*',false);
+    ScanForPorts('/dev/ttyACM*',true); 
    {$IFDEF DARWIN}
     ScanForPorts( '/dev/tty.usbserial*',false); // RPH 14May2016, for FTDI driver
     ScanForPorts( '/dev/tty.UC-232*',false);    // RPH 15May2016, for Prolific driver
