@@ -2297,16 +2297,17 @@ begin
     exit;  // done.
   end;
   // Is port owned by orphan? Then it's time for error recovery.
-  //FPC forgot to add getsid.. :-(
   {$IFNDEF FPC}
   if Libc.getsid(ReadLockfile) = -1 then
+  {$ELSE}
+  if FpGetSid(ReadLockfile) = -1 then
+  {$ENDIF}
   begin //  Lockfile was left from former desaster
     DeleteFile(Filename); // error recovery
     CreateLockfile(MyPid);
     result := true;
     exit;
   end;
-  {$ENDIF}
   result := false // Sorry, port is owned by living PID and locked
 end;
 
